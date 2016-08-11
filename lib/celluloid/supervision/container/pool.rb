@@ -136,7 +136,6 @@ module Celluloid
         def __spawn_actor__
           actor = @klass.new_link(*@args)
           @mutex.synchronize { @actors.add(actor) }
-          @actors.add(actor)
           actor
         end
 
